@@ -37,5 +37,5 @@ jobs:
         app-name: steel-daily-client
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_65FF07D996BC4D4286BB70999A151791 }}
-        package: .
+        package: 'build'
 
