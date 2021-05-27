@@ -20,7 +20,7 @@ export const LandingPage = () => {
     const loadFeedData = () => {
         return getToken()
             .then(token =>
-                fetch(`/steeldaily.azurewebsites.net/api/streak/landingpage`, {
+                fetch(`https://steeldaily.azurewebsites.net/api/streak/landingpage`, {
                     method: "GET",
                     headers: {
                         Authorization: `Bearer ${token}`,

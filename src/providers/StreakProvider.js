@@ -10,7 +10,7 @@ export function StreakProvider(props) {
 
     const getStreak = () => {
         getToken().then((token) => {
-            return fetch(`/steeldaily.azurewebsites.net/api/streak`, {
+            return fetch(`https://steeldaily.azurewebsites.net/api/streak`, {
                 method: "GET",
                 headers: {
                     Authorization: `Bearer ${token}`,

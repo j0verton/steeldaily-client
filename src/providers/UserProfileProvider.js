@@ -6,7 +6,7 @@ import "firebase/auth";
 export const UserProfileContext = createContext();
 
 export function UserProfileProvider(props) {
-  const apiUrl = "/steeldaily.azurewebsites.net/api/userprofile";
+  const apiUrl = "https://steeldaily.azurewebsites.net/api/userprofile";
 
   const userProfile = localStorage.getItem("userProfile");
   const [isLoggedIn, setIsLoggedIn] = useState(userProfile != null);

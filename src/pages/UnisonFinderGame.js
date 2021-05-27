@@ -20,7 +20,7 @@ const UnisonFinderGame = () => {
     const startGame = () => {
         return getToken()
             .then(token =>
-                fetch(`/steeldaily.azurewebsites.net/api/game/unison`, {
+                fetch(`https://steeldaily.azurewebsites.net/api/game/unison`, {
                     method: "GET",
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -45,7 +45,7 @@ const UnisonFinderGame = () => {
         }
         return getToken()
             .then(token =>
-                fetch(`/steeldaily.azurewebsites.net/api/game/unison`, {
+                fetch(`https://steeldaily.azurewebsites.net/api/game/unison`, {
                     method: "POST",
                     headers: {
                         Authorization: `Bearer ${token}`,
