@@ -38,7 +38,7 @@ const NTIGame = () => {
     const startGame = () => {
         return getToken()
             .then(token =>
-                fetch(`/api/game/1/${tuning}/${key}`, {
+                fetch(`/steeldaily.azurewebsites.net/api/game/1/${tuning}/${key}`, {
                     method: "GET",
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -57,7 +57,7 @@ const NTIGame = () => {
         }
         return getToken()
             .then(token =>
-                fetch(`/api/game/`, {
+                fetch(`/steeldaily.azurewebsites.net/api/game/`, {
                     method: "POST",
                     headers: {
                         Authorization: `Bearer ${token}`,

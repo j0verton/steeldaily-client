@@ -6,7 +6,7 @@ import "firebase/auth";
 export const UserProfileContext = createContext();
 
 export function UserProfileProvider(props) {
-  const apiUrl = "/api/userprofile";
+  const apiUrl = "/steeldaily.azurewebsites.net/api/userprofile";
 
   const userProfile = localStorage.getItem("userProfile");
   const [isLoggedIn, setIsLoggedIn] = useState(userProfile != null);
@@ -113,8 +113,8 @@ export function UserProfileProvider(props) {
       {isFirebaseReady ? (
         props.children
       ) : (
-          <Spinner className="app-spinner dark" />
-        )}
+        <Spinner className="app-spinner dark" />
+      )}
     </UserProfileContext.Provider>
   );
 }

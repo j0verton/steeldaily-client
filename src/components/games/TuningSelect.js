@@ -13,7 +13,7 @@ const TuningSelect = ({ setTuning }) => {
     const getTunings = () => {
         return getToken()
             .then(token =>
-                fetch(`/api/game/tunings`, {
+                fetch(`/steeldaily.azurewebsites.net/api/game/tunings`, {
                     method: "GET",
                     headers: {
                         Authorization: `Bearer ${token}`,

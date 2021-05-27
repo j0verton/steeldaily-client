@@ -38,7 +38,7 @@ const NTIFBGame = () => {
     const startGame = () => {
         return getToken()
             .then(token =>
-                fetch(`/api/game/2/${tuning}/${key}`, {
+                fetch(`/steeldaily.azurewebsites.net/api/game/2/${tuning}/${key}`, {
                     method: "GET",
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -58,7 +58,7 @@ const NTIFBGame = () => {
         }
         return getToken()
             .then(token =>
-                fetch(`/api/game/`, {
+                fetch(`/steeldaily.azurewebsites.net/api/game/`, {
                     method: "POST",
                     headers: {
                         Authorization: `Bearer ${token}`,
