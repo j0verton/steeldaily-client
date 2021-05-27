@@ -16,6 +16,7 @@ jobs:
     # checkout the repo
     - name: 'Checkout Github Action'
       uses: actions/checkout@master
+      
 
 
     - name: Set up Node.js version
@@ -24,6 +25,8 @@ jobs:
         node-version: '14.x'
 
     - name: npm install and build
+      env: # Or as an environment variable
+        REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
       run: |
         npm install
         CI=false npm run build --if-present
