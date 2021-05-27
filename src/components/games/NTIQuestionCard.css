@@ -1,0 +1,15 @@
+.isIncorrect{
+    background-color: firebrick;
+
+}
+
+.isIncorrectAns{
+    
+    text-decoration: line-through;
+}
+
+.gameCard {
+margin: 15px;
+width: 25em;
+height: 18em
+}

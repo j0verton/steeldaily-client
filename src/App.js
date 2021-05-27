@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router } from "react-router-dom";
+import ApplicationViews from "./components/ApplicationViews";
+import { UserProfileProvider } from "./providers/UserProfileProvider";
+import { ToastContainer } from "react-toastify";
+import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
+import AppHeader from "./components/AppHeader";
+import { StreakProvider } from "./providers/StreakProvider";
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ToastContainer position="bottom-right" hideProgressBar />
+      <UserProfileProvider>
+        <StreakProvider>
+          <Router>
+            <AppHeader />
+            <ApplicationViews />
+          </Router>
+        </StreakProvider>
+      </UserProfileProvider>
     </div>
   );
 }
